@@ -1,0 +1,100 @@
+<html>
+<head>
+<title></title>
+<script language='javascript'>
+function CheckInput(frm)
+{
+alert('chala');
+var username=frm.username.value;
+var password=frm.password.value;
+var confirmPassword=frm.confirmPassword.value;
+var authentic=true;
+var firstInvalidComponent=null;
+if(username.length==0)
+{
+document.getElementById("usernameErrorSection").innerHTML="name required";
+firstInvalidComponent=frm.username;
+authentic=false;
+}
+if(password.length>=5)
+{
+v='ABCDEFGHIJKLMNOPQRSTUVWXYZ.';
+e=0;
+while(e<password.length)
+{
+if(v.indexOf(password.charAt(e))==-1)
+{
+alert('enter in uppercase');
+frm.password.value='';
+frm.password.focus();
+authentic=false;
+}
+e++;
+}
+}
+else
+{
+alert('password length is short');
+}
+return authentic=false;
+}
+}
+</script>
+</head>
+<body class="bodyText">
+<div class="siteName">Online Discussion Forum</div>
+<form action='/tagtwo.com/studentSignUp' method="POST" onsubmit="return checkInput(this)">
+<table border="1">
+<tbody>
+<tr>
+<td>Username</td>
+<td><input type="text" name="username" value="" />
+<span class="errorMessage" id="usernameErrorSection"></span>
+</td>
+</tr>
+<tr>
+<td>Password</td>
+<td><input type="password" name="password" value=""/>
+<span class="errorMessage" id="passwordErrorSection"></span>
+</td>
+</tr>
+<tr>
+<td>Confirm Password</td>
+<td><input type="password" name="confirmPassword" value='' />
+<span class="errorMessage" id="confirmPasswordErrorSection"></span>
+</td>
+</tr>
+<tr>
+<td>Sex</td>
+<td>
+Male<input type="radio" name="sex" value="M" />
+&nbsp;&nbsp;
+Female<input type="radio" name="sex" value="F" />
+</td>
+</tr>
+<tr>
+<td>Are You Adult<br>(Above 18 Yrs)</td>
+<td><input type="checkbox" name="isAdult" value="Y"/>
+</td>
+</tr>
+<tr>
+<td>Address</td>
+<td>
+<textarea name="address" rows="5" cols="20"></textarea></td>
+</tr>
+<tr>
+<td>Terms and Condition <input type="checkbox" name="IsCheck" value=""/>
+</td>
+<td><textarea name='ads'></textarea>
+</td>
+</tr>
+<tr>
+<td colspan="2" align="center"><input type="submit" value="SignUp" /></td>
+</tr>
+</tbody>
+</table>
+
+</form>
+</div>
+</body>
+</html>

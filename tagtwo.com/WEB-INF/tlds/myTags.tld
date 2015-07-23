@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib version="2.0" xmlns="http://java.sun.com/xml/ns/j2ee"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee web-jsptaglibrary_2_0.xsd">
+<tlib-version>1.0</tlib-version>
+<short-name>mytags</short-name>
+<uri>/WEB-INF/tlds/MyTags</uri>
+<tag>
+<description>A Tag to decide how many times code run</description>
+<name>OuterIterativeTag</name>
+<tag-class>thinking.machines.OuterIterativeTag</tag-class>
+</tag>
+<tag>
+<description>A Tag to decide how many times code run</description>
+<name>teacherOuterIterativeTag</name>
+<tag-class>thinking.machines.teacherOuterIterativeTag</tag-class>
+</tag>
+<tag>
+<description>A tag used to extract questions</description>
+<name>QuestionTag</name>
+<tag-class>thinking.machines.QuestionTag</tag-class>
+<tei-class>thinking.machines.QuestionTagTEI</tei-class>
+</tag>
+
+<tag>
+<description>A tag used to extract questions</description>
+<name>teacherQuestionTag</name>
+<tag-class>thinking.machines.teacherQuestionTag</tag-class>
+<tei-class>thinking.machines.teacherQuestionTagTEI</tei-class>
+</tag>
+<tag>
+<description>A Tag to decide how many times code run</description>
+<name>teacherAnswerTag</name>
+<tag-class>thinking.machines.teacherAnswerTag</tag-class>
+<tei-class>thinking.machines.teacherAnswerTagTEI</tei-class>
+
+</tag>
+<tag>
+<description>A Tag to decide how many times code run</description>
+<name>AnswerTag</name>
+<tag-class>thinking.machines.AnswerTag</tag-class>
+<tei-class>thinking.machines.AnswerTagTEI</tei-class>
+
+</tag>
+<tag>
+<description>A Tag to decide how many times code run</description>
+<name>CommentTag</name>
+<tag-class>thinking.machines.CommentTag</tag-class>
+<tei-class>thinking.machines.commentTagTEI</tei-class>
+
+</tag>
+</taglib>   
